@@ -1,0 +1,372 @@
+@font-face {
+    font-family: "Fetish";
+    src: url(fonts/Fashion\ Fetish\ Regular.ttf);
+}
+
+@font-face {
+    font-family: "Fetish-Lower";
+    src: url(fonts/Fashion\ Fetish\ Light.ttf);
+}
+body {
+    overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+    width: 10px;               
+}
+  
+body::-webkit-scrollbar-track {
+    background: #F3F3F3;        
+}
+  
+body::-webkit-scrollbar-thumb {
+    background-color: #242424;    
+    border-radius: 0px;       
+    border: 0px solid #242424;  
+}
+
+* {
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Fetish";
+}
+
+.container{
+    max-width: 1080px;
+}
+
+@media screen and (min-width: 1500px )
+    {
+    .container{
+        max-width: 1800px;
+    }
+}
+
+.burger-menu{
+    background: #0084FF;
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    font-family: "Fetish-Lower" !important;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    transform: translateX(100%);
+    transition: .5s ease all;
+}
+
+.burger-menu.open {transform: translateX(0%);}
+
+.burger-menu a{
+    background: none;
+    text-decoration: none;
+    color: #F3F3F3;
+    font-size: 4rem;
+}
+
+@media screen and (max-width: 991px){
+    .burger-menu {
+        text-align: center;
+    }
+    
+}
+@media screen and (max-width: 500px) {
+    .burger-menu a {
+        text-align: center;
+        font-size: 3rem;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .burger-menu a {
+        text-align: center;
+        font-size: 2.7rem;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .burger-menu a {
+        text-align: center;
+        font-size: 2.5rem;
+    }
+}
+
+.burger-menu p:hover{
+    color: #242424;
+    transform: scale(1.2);
+}
+
+.burger-menu p{
+    transition: .5s ease-in-out all;
+}
+
+
+.burger-menu .burger-social svg:hover{
+    transform: scale(1.5);
+}
+
+.burger-menu svg{
+    transition: .7s ease-in-out all;
+}
+
+
+.burger-social {
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    transform: scale(0);
+    transition: .5s ease all .7s;
+}
+
+.menu-option{
+    display: grid;
+    align-content: center;
+    justify-content: space-around;
+    padding-left: 20%;
+    color: #F3F3F3;
+    text-transform: uppercase;
+    transform: scale(0);
+    transition: .5s ease all .35s;
+}
+
+.burger-menu.open .menu-option {transform: scale(1);}
+
+.burger-menu.open .burger-social {transform: scale(1);}
+
+.menu-option1{
+    display: grid;
+    align-content: space-around;
+    justify-content: space-around;
+    padding-left: 20%;
+    color: #F3F3F3;
+    text-transform: uppercase;
+}
+
+.navbar{
+    position: fixed;
+}
+
+.navbar svg:hover{
+    transform: scale(1.2);
+}
+.navbar svg{
+    transition: .7s ease-in-out all;
+}
+
+.navbar-burger{
+    position: fixed;
+    z-index: 997;
+    top: 15px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.navbar-close {
+    position: absolute;
+    z-index: 2;
+    right: 30px;
+    top: 30px;
+    cursor: pointer;
+    transform: scale(0);
+    transform-origin: center;
+    transition: .3s ease all;
+}
+
+.burger-menu.open .navbar-close {transform: scale(1); transition-delay: 1s;}
+
+.burger-menu .navbar-close .navbar-rotate svg:hover {
+    transform: rotate(90deg);
+}
+
+.main{
+    min-height: 100vh;
+    display: grid;
+    align-content: center;
+}
+.main-title{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2px;
+}
+
+.second-title{
+    background: #FF9E00;
+    text-align: center;
+    width: 25%;
+    padding: 0.4rem;
+    margin: 0.5rem auto;
+    box-shadow: -1px 2px 5px 2px rgba(145,128,128,0.87);
+    -webkit-box-shadow: -1px 2px 5px 2px rgba(145,128,128,0.87);
+    -moz-box-shadow: -1px 2px 5px 2px rgba(145,128,128,0.87);
+}
+
+@media screen and (max-width: 992px ) {
+    .second-title{
+        width: 40%;
+    }
+}
+
+@media screen and (max-width:515px) {
+    .second-title{
+        font-size: 0.7rem;
+        width: 50%;
+    }
+
+
+}
+
+@media screen and (max-width: 380px) {
+    .second-title{
+        font-size: 0.7rem;
+    }
+}
+
+.about {
+    min-height: 100vh;
+    display: grid;
+    align-content: center;
+}
+
+@media screen and (max-width: 500px) {
+    .about p {
+        font-size: 0.75rem;
+    }
+
+    .about h5 {
+        font-size: 1rem;
+    }
+
+    .about-title{
+        margin-bottom: 3rem;
+        padding: 1rem 1rem;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .about p{
+        font-size: 0.8rem;
+    }
+
+    .about h5{
+        font-size: 0.95rem;
+    }
+
+    .about-photo img{
+        margin-top: 10%;
+    }
+
+    .about-title{
+        margin-bottom: 3rem;
+        padding: 1rem 1rem;
+    }
+}
+
+.about-title{
+    margin-bottom: 4rem;
+}
+
+.about-photo{
+    display: grid;
+    align-content: center;
+}
+
+.about-text-item{
+    margin-bottom: 1rem;
+}
+
+.vec{
+    display: grid;
+    align-content: center;
+    justify-content: center;
+}
+
+.vec1{
+    display: grid;
+    align-content: center;
+    justify-content: center;
+}
+
+.experience{
+    min-height: 100vh;
+    display: grid;
+    align-content: center;
+    margin-bottom: 2rem;
+}
+
+@media screen and (max-width: 500px) {
+    .experience p {
+        font-size: .75rem;
+    }
+
+    .experience-title{
+        padding: 1rem 1rem;
+    }
+
+}
+
+.experience-title{
+    margin-bottom: 3rem;
+}
+
+.experience-item{
+    padding: 2.5% 0%;
+}
+
+.experience a{
+    text-decoration: none;
+    color: #BF303A;
+    font-weight: 500;
+}
+
+.experience a:hover{
+    color: #242424;
+    transition: 2s;
+}
+
+.third{
+    margin-bottom: 4rem;
+}
+
+.footer{
+    min-height: 30vh;
+    background: #242424;
+    color: #F3F3F3;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    font-weight: 100;
+}
+
+.footer-social{
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+}
+
+.footer-social svg:hover{
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+.footer-social svg{
+    transition: .7s ease-in-out all;
+}
+
+.burger-contact a{
+    margin: 0rem 1rem;
+}
+
+.test{
+    display: grid;
+    margin: auto;
+    align-content: center;
+    justify-content: center;
+}
+
+.test p {
+    margin-bottom: 0 !important;
+}
