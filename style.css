@@ -193,8 +193,10 @@ body::-webkit-scrollbar-thumb {
 }
 
 .second-title{
+    display: flex;
     background: #FF9E00;
-    text-align: center;
+    justify-content: center;
+    align-items: center;
     width: 25%;
     padding: 0.4rem;
     margin: 0.5rem auto;
